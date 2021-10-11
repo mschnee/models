@@ -57,7 +57,7 @@ jobs:
           git push --follow-tags
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_GITHUB }}
-      - name: Publish Library
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_GITHUB }}
+      # - name: Publish Library
+      #   run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_GITHUB }}

@@ -1,0 +1,551 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for mongodb/types/bindings.generated.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">mongodb/types</a> bindings.generated.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>147/147</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>147/147</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+* This file was automatically generated at 2021-09-24T23:33:10.490Z.
+* It should not be committed to git, and you shouldn't make any changes to it.
+*/
+&nbsp;
+import { BindingKey } from '@loopback/core';
+import * as mongoose from 'mongoose';
+import * as Models from './models.generated';
+&nbsp;
+import { MongooseComponent } from '../Mongoose.component';
+export const COMPONENT = BindingKey.create&lt;MongooseComponent&gt;('components.MongooseComponent');
+&nbsp;
+export const Auth = BindingKey.create&lt;Models.Auth&gt;('com.bambee.models.typegoose.Auth');
+export const CompanyAdvisor = BindingKey.create&lt;Models.CompanyAdvisor&gt;('com.bambee.models.typegoose.CompanyAdvisor');
+export const CompanyAdvisorAssignmentHistory = BindingKey.create&lt;Models.CompanyAdvisorAssignmentHistory&gt;('com.bambee.models.typegoose.CompanyAdvisorAssignmentHistory');
+export const CompanyInsurancePlan = BindingKey.create&lt;Models.CompanyInsurancePlan&gt;('com.bambee.models.typegoose.CompanyInsurancePlan');
+export const CompanyMilestone = BindingKey.create&lt;Models.CompanyMilestone&gt;('com.bambee.models.typegoose.CompanyMilestone');
+export const CompanyScore = BindingKey.create&lt;Models.CompanyScore&gt;('com.bambee.models.typegoose.CompanyScore');
+export const DocumentTemplate = BindingKey.create&lt;Models.DocumentTemplate&gt;('com.bambee.models.typegoose.DocumentTemplate');
+export const InsuranceCarrier = BindingKey.create&lt;Models.InsuranceCarrier&gt;('com.bambee.models.typegoose.InsuranceCarrier');
+export const LeadForm = BindingKey.create&lt;Models.LeadForm&gt;('com.bambee.models.typegoose.LeadForm');
+export const Locale = BindingKey.create&lt;Models.Locale&gt;('com.bambee.models.typegoose.Locale');
+export const PolicyBundle = BindingKey.create&lt;Models.PolicyBundle&gt;('com.bambee.models.typegoose.PolicyBundle');
+export const PolicyThread = BindingKey.create&lt;Models.PolicyThread&gt;('com.bambee.models.typegoose.PolicyThread');
+export const SystemAudit = BindingKey.create&lt;Models.SystemAudit&gt;('com.bambee.models.typegoose.SystemAudit');
+export const WorkflowResult = BindingKey.create&lt;Models.WorkflowResult&gt;('com.bambee.models.typegoose.WorkflowResult');
+export const Acknowledgement = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Acknowledgement');
+export const ActionItem = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.ActionItem');
+export const CalendarEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.CalendarEvent');
+export const Cancellation = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Cancellation');
+export const CompanyOverview = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.CompanyOverview');
+export const Company = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Company');
+export const ConsumableToken = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.ConsumableToken');
+export const Configuration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration');
+export const Conversation = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Conversation');
+export const Document = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Document');
+export const Emergency = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Emergency');
+export const EmployeeNote = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.EmployeeNote');
+export const EmployeeReview = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.EmployeeReview');
+export const Event = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event');
+export const Feed = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Feed');
+export const File = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.File');
+export const Filestack = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Filestack');
+export const Folder = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Folder');
+export const GoogleWatchChannel = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.GoogleWatchChannel');
+export const ModelLog = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.ModelLog');
+export const Node = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Node');
+export const Note = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Note');
+export const PartnerUser = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.PartnerUser');
+export const Pip = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Pip');
+export const Policy = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Policy');
+export const Qna = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Qna');
+export const Question = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Question');
+export const ReportCard = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.ReportCard');
+export const Report = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Report');
+export const Resignation = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Resignation');
+export const Signature = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Signature');
+export const Step = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Step');
+export const StripeEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.StripeEvent');
+export const Ticket = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Ticket');
+export const Termination = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Termination');
+export const Token = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Token');
+export const Tree = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Tree');
+export const Unsubscribe = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Unsubscribe');
+export const UserProfile = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.UserProfile');
+export const User = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.User');
+export const Verbalwarning = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Verbalwarning');
+export const Version = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Version');
+export const VonageCall = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.VonageCall');
+export const Writtenwarning = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Writtenwarning');
+export const DuplicateCompany = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.DuplicateCompany');
+export const AcknowledgeExpectationEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.AcknowledgeExpectation');
+export const AcknowledgementCancellationEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.AcknowledgementCancellation');
+export const AcknowledgementNotificationEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.AcknowledgementNotification');
+export const ActivatedEmployeeEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.ActivatedEmployee');
+export const AddedEmployeesEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.AddedEmployees');
+export const ApprovalApprovedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.ApprovalApproved');
+export const ApprovalDeniedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.ApprovalDenied');
+export const ApprovalRequestEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.ApprovalRequest');
+export const AssignedAdvisorRoleEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.AssignedAdvisorRole');
+export const AssignedAdvisorEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.AssignedAdvisor');
+export const AssignedSalesEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.AssignedSales');
+export const BciPageViewEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.BciPageView');
+export const CancelSubscriptionEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CancelSubscription');
+export const CapCreatedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CapCreated');
+export const CompletedResignationCreatedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CompletedResignationCreated');
+export const CompletedTerminationCreatedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CompletedTerminationCreated');
+export const CustomerRescheduledOverviewCallEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CustomerRescheduledOverviewCall');
+export const CustomerScheduledGeneralCallEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CustomerScheduledGeneralCall');
+export const CustomerScheduledHrAuditCallEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CustomerScheduledHrAuditCall');
+export const CustomerScheduledInitialCallEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CustomerScheduledInitialCall');
+export const CustomerScheduledOverviewCallEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CustomerScheduledOverviewCall');
+export const CustomerScheduledPlatformCallEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CustomerScheduledPlatformCall');
+export const CustomerTicketCreatedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.CustomerTicketCreated');
+export const EmployeeSelfSignupEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.EmployeeSelfSignup');
+export const EmployeesAddedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.EmployeesAdded');
+export const HandbookCompletedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.HandbookCompleted');
+export const HandbookStartedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.HandbookStarted');
+export const HrAuditCompleteEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.HrAuditComplete');
+export const ImmediateCallRequestedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.ImmediateCallRequested');
+export const InitialCallCompleteEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.InitialCallComplete');
+export const InsuranceEmailOutreachEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.InsuranceEmailOutreach');
+export const InsuranceInterestEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.InsuranceInterest');
+export const LoggedInEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.LoggedIn');
+export const NewEmployeeWelcomeEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.NewEmployeeWelcome');
+export const NewLeadEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.NewLead');
+export const NewSubscriptionEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.NewSubscription');
+export const NotifyCapSignatureRequestEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.NotifyCapSignatureRequest');
+export const OnboardingInProgressEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.OnboardingInProgress');
+export const OnlineOfferSelfSignupEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.OnlineOfferSelfSignup');
+export const OverviewCallCanceledEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.OverviewCallCanceled');
+export const OverviewCallCompleteEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.OverviewCallComplete');
+export const OverviewCallNoShowEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.OverviewCallNoShow');
+export const OwnerActivatedAccountEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.OwnerActivatedAccount');
+export const PaymentFailureEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PaymentFailure');
+export const PersonaCreatedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PersonaCreated');
+export const PlatformTrainingCallActivatedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PlatformTrainingCallActivated');
+export const PlatformTrainingCallCompleteEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PlatformTrainingCallComplete');
+export const PoliciesSentToStaffEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PoliciesSentToStaff');
+export const PolicyApprovalRequestEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PolicyApprovalRequest');
+export const PolicyApprovalEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PolicyApproval');
+export const PolicyCompletedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PolicyCompleted');
+export const PolicyDeclineEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PolicyDecline');
+export const PolicyImplementedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PolicyImplemented');
+export const PolicyPassedQAEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PolicyPassedQA');
+export const PolicyReminderSentEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PolicyReminderSent');
+export const PolicySignedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.PolicySigned');
+export const ResendActivationEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.ResendActivation');
+export const ResolvedCancellationEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.ResolvedCancellation');
+export const SalesLeadActiveEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.SalesLeadActive');
+export const SalesNotQualifiedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.SalesNotQualified');
+export const SalesNurtureEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.SalesNurture');
+export const SalesQualifiedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.SalesQualified');
+export const SelfSignupEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.SelfSignup');
+export const SendSalesHrAuditScoreEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.SendSalesHrAuditScore');
+export const TerminationCreatedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.TerminationCreated');
+export const TerminationInProgressEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.TerminationInProgress');
+export const UserProfileUpdatedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.UserProfileUpdated');
+export const UserTokenUsedEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.UserTokenUsed');
+export const UserUpdatePasswordEvent = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Event.UserUpdatePassword');
+export const CalendlyConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.Calendly');
+export const CancellationReasonsConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.CancellationReasons');
+export const DefaultAdvisorConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.DefaultAdvisor');
+export const DefaultChatOnlyConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.DefaultChatOnly');
+export const DefaultDuplicateCalculationConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.DefaultDuplicateCalculation');
+export const DefaultInsuranceAgentConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.DefaultInsuranceAgent');
+export const DefaultOnboardingConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.DefaultOnboarding');
+export const DefaultRequestTimeConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.DefaultRequestTime');
+export const DefaultSalesConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.DefaultSales');
+export const DefaultTodosConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.DefaultTodos');
+export const NewHireNoticeConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.NewHireNotice');
+export const NowcertsConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.Nowcerts');
+export const PandaDocConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.PandaDoc');
+export const RehireConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.Rehire');
+export const SalesforceConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.Salesforce');
+export const SystemConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.System');
+export const VonageConfiguration = BindingKey.create&lt;mongoose.Model&lt;any&gt;&gt;('com.bambee.models.mongoose.Configuration.Vonage');
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Fri Sep 24 2021 16:59:36 GMT-0700 (Pacific Daylight Time)
+            </div>
+        </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

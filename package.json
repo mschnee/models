@@ -1,0 +1,96 @@
+{
+  "name": "@bambeehr/models",
+  "version": "5.0.0",
+  "description": "Bambee's Models",
+  "author": "Matthew Schnee <matthew.schnee@bambee.com>",
+  "homepage": "https://github.com/BambeeHR/models#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "peerDependencies": {
+    "@loopback/core": "^2.17.0"
+  },
+  "dependencies": {
+    "@bambeehr/api-core": "^2.1.7",
+    "@typegoose/typegoose": "^9.1.0",
+    "bcrypt": "^5.0.1",
+    "chalk": "^4.1.2",
+    "class-sanitizer": "^1.0.1",
+    "class-validator": "^0.13.1",
+    "csvtojson": "^2.0.10",
+    "debug": "^4.3.2",
+    "dotenv": "^10.0.0",
+    "geojson": "^0.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "migrate": "^1.7.0",
+    "moment": "^2.29.1",
+    "mongodb": "^4.1.3",
+    "mongoose": "^6.0.9",
+    "mongoose-paginate": "^5.0.3",
+    "pg": "^8.7.1",
+    "prompts": "^2.4.1",
+    "tslib": "^2.3.1",
+    "typeorm": "0.2.38",
+    "uid-generator": "^2.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BambeeHR/models.git",
+    "directory": "packages/models"
+  },
+  "scripts": {
+    "acceptance": "run-s acceptance:*",
+    "acceptance:mongo": "nyc --report-dir coverage/mongo npm run mocha:mongo",
+    "acceptance:pg": "nyc --report-dir coverage/pg npm run mocha:pg",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "mocha:mongo": "NODE_OPTIONS=--enable-source-maps mocha \"dist/acceptance/mongodb/mongo.docker.js\" \"dist/acceptance/mongodb/**/*.acceptance.js\"",
+    "mocha:pg": "NODE_OPTIONS=--enable-source-maps mocha \"dist/acceptance/postgres/pg.docker.js\" \"dist/acceptance/postgres/**/*.acceptance.js\"",
+    "rebuild": "npm run clean && npm run build",
+    "prestart": "npm run rebuild",
+    "clean": "rimraf dist *.tsbuildinfo .eslintcache src/**/*.generated.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/BambeeHR/models/issues"
+  },
+  "bin": {
+    "bambee-mongo-migrate": "./bambee-mongo-migrate.js",
+    "bambee-typeorm": "./bambee-typeorm.js"
+  },
+  "files": [
+    "!dist/**/__tests__/**",
+    "bin/",
+    "data/",
+    "dist/",
+    "ssl/",
+    "bambee-mongo-migrate.js",
+    "bambee-typeorm.js",
+    "migrations/",
+    "mongodb.d.ts",
+    "mongodb.js",
+    "rds.d.ts",
+    "rds.js",
+    "README.md",
+    "ormconfig.js"
+  ],
+  "gitHead": "df12c8375c9cb6fe5d072cd3d678d8f707b85418",
+  "devDependencies": {
+    "@bambeehr/build": "^1.0.2",
+    "@loopback/build": "^7.0.1",
+    "@types/chai": "^4.2.22",
+    "@types/faker": "^5.5.8",
+    "@types/mocha": "^9.0.0",
+    "@types/winston": "^2.4.4",
+    "chai": "^4.3.4",
+    "faker": "^5.5.3",
+    "mocha": "^9.1.2",
+    "rimraf": "^3.0.2",
+    "testcontainers": "^7.21.0",
+    "typescript": "^4.4.3",
+    "winston": "^3.3.3"
+  }
+}

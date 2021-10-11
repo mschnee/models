@@ -1,0 +1,14 @@
+.github/
+dist
+coverage
+CHANGELOG.md
+kubernetes_manifests
+*.generated.ts
+**/*.generated.ts
+*.d.ts
+**/generated/**
+package-lock.json
+**/package-lock.json
+**/typescript-axios/**
+**/dart-client/**
+**/go-client/**

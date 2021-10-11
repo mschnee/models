@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Docker debug: bambee-api-v2",
+      "remoteRoot": "/home/node/app",
+      "port": 24012,
+      "restart": true,
+      "preLaunchTask": "docker-compose:api:up",
+      "postDebugTask": "docker-compose:api:down"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Docker debug: bambee-event-service",
+      "remoteRoot": "/home/node/app",
+      "port": 24022,
+      "restart": true,
+      "preLaunchTask": "docker-compose:event-service:up",
+      "postDebugTask": "docker-compose:event-service:down"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Current Test File",
+      "program": "${workspaceFolder}/bin/mocha-current-file",
+      "args": ["${file}"],
+      "outFiles": [
+        // "${workspaceFolder}/packages/**/dist/**/*.js",
+        // "${workspaceFolder}/services/**/dist/**/*.js",
+        // "${workspaceFolder}/components/**/dist/**/*.js",
+        // "${workspaceFolder}/acceptance/**/dist/**/*.js"
+      ],
+      "sourceMaps": true,
+      "runtimeArgs": ["--nolazy", "--trace-deprecation", "--trace-warnings", "--enable-source-maps"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "timeout": 20000,
+      "env": {
+        "IS_DEBUGGING": "true",
+        "NODE_ENV": "test"
+      },
+      "autoAttachChildProcesses": true
+    }
+  ]
+}

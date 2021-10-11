@@ -1,0 +1,10 @@
+{
+  "all": false,
+  "reporter": ["text-summary", "json", "html"],
+  "include": ["src", "dist"],
+  "extension": [".ts", ".js"],
+  "exclude": ["*.test.ts", "*.unit.ts", "*.spec.ts", "**/__tests__/**", "**/generated/**"],
+  "sourceMap": true,
+  "instrument": true,
+  "exclude-after-remap": false
+}

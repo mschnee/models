@@ -1,0 +1,38 @@
+[
+  {
+    "zip": 96795,
+    "stateName": "Hawaii",
+    "stateId": "HI",
+    "city": "Honolulu"
+  },
+  {
+    "zip": 90013,
+    "stateName": "California",
+    "stateId": "CA",
+    "city": "Los Angeles"
+  },
+  {
+    "zip": 91020,
+    "stateName": "California",
+    "stateId": "CA",
+    "city": "Glendale"
+  },
+  {
+    "zip": 90401,
+    "stateName": "California",
+    "stateId": "CA",
+    "city": "Santa Monica"
+  },
+  {
+    "zip": 92697,
+    "stateName": "California",
+    "stateId": "CA",
+    "city": "Irvine"
+  },
+  {
+    "zip": 90065,
+    "stateName": "California",
+    "stateId": "CA",
+    "city": "Los Angeles"
+  }
+]

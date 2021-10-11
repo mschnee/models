@@ -1,0 +1,63 @@
+name: GitHub Release
+
+on:
+  push:
+    branches:
+      - main
+env:
+  NPM_TOKEN_GITHUB: ${{ secrets.NPM_TOKEN_GITHUB }}
+
+jobs:
+  release:
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          always-auth: true
+          node-version: '16'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@bambeehr'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_GITHUB }}
+      - name: Write npmrc
+        run: |
+          cat <<EOF > ${{ runner.temp }}/.npmrc
+            @bambeehr:registry=https://npm.pkg.github.com/
+            //npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN_GITHUB }}
+            //npm.pkg.github.com/:always-auth=true
+            EOF
+      - uses: actions/cache@v2
+        id: cachenodemodules
+        with:
+          path: ./app/node_modules
+          key: ${{ runner.os }}-nodemodules-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nodemodules-
+      - name: Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install Dependencies
+        run: npm ci
+        env:
+          HUSKY: 0
+      - name: Build Sources
+        run: npm run build
+      - name: Run Unit and Acceptance tests
+        run: npm run acceptance
+      - name: Version
+        run: |
+          npm ci
+          npm run revision
+          git push --follow-tags
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_GITHUB }}
+      - name: Publish Library
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_GITHUB }}

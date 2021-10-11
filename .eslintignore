@@ -1,0 +1,13 @@
+node_modules
+dist
+coverage
+bin
+/*.js
+**/generated/**
+kubernetes_manifests
+**/*.generated.ts
+*.d.ts
+**/typescript-axios/**
+**/dart-client/**
+**/go-client/**
+**/generate-index.js

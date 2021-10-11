@@ -1,0 +1,27 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "docker-compose:api:up",
+      "command": "bambee-debug api-v2 up"
+    },
+    {
+      "type": "shell",
+      "label": "docker-compose:event-service:up",
+      "command": "bambee-debug event-service up"
+    },
+    {
+      "type": "shell",
+      "label": "docker-compose:api:down",
+      "command": "bambee-debug api-v2 down"
+    },
+    {
+      "type": "shell",
+      "label": "docker-compose:event-service:up",
+      "command": "bambee-debug event-service down"
+    }
+  ]
+}

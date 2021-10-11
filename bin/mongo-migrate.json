@@ -1,0 +1,8 @@
+{
+  "mongo": {
+    "driver": "mongodb"
+  },
+  "dev": {
+    "driver": "mongodb"
+  }
+}

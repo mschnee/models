@@ -1,0 +1,382 @@
+[
+  {
+    "code": "business",
+    "externalText": "Business Change",
+    "reasons": [
+      {
+        "code": 8,
+        "externalText": "Sold my company, or going out of business",
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 15,
+        "externalText": "Didn't hire as intended, or laid off employees",
+        "rebuttalOrder": 9,
+        "rebuttalData": {
+          "tagline": "Special Offer",
+          "title": "Pause for $9/month",
+          "text": "If you plan to hire more employees in the future, it's recommended that you have the right HR policies and compliance in place before they begin. Would you like to switch to our Pause Plan for only $9 per month, so you're ready to go when you hire again and avoid paying another setup fee?",
+          "content": "pause-benefits",
+          "primaryAction": "Pause for $9/month",
+          "acceptanceText": "Thank you! We'll switch you to the Pause Plan for $9/month, and you can reactivate your regular plan at any time. Our Customer Experience Team will email you within one business day to confirm the switch. Have a great day!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 0,
+        "externalText": "Admin that purchased Bambee left the company",
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 3,
+        "externalText": "Cutting HR budget, I'm going to manage HR myself",
+        "rebuttalOrder": 7,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Don't put yourself at risk",
+          "text": "The average lawsuit costs $600,000, and the best way to avoid this is through proper HR and insurance. Would you like to speak with our Customer Experience team about how we can demonstrate the ROI you need to continue with Bambee?",
+          "primaryAction": "Yes, Contact Me",
+          "primaryActionIcon": "/assets/images/d-icon-set/phone/fill-white.svg",
+          "acceptanceText": "Thank you! Our Customer Experience Team will reach out to you within one business day, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": false,
+        "internalOnly": false
+      },
+      {
+        "code": 29,
+        "externalText": "Hiring administrative assistant/coordinator to manage HR (1-4 yrs. experience)",
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 30,
+        "externalText": "Hiring HR Expert (5+ yrs. experience)",
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 27,
+        "externalText": "Coronavirus-related cutbacks",
+        "rebuttalOrder": 9,
+        "rebuttalData": {
+          "tagline": "Special Offer",
+          "title": "Pause for $9/month",
+          "text": "If you plan to hire more employees in the future, it's recommended that you have the right HR policies and compliance in place before they begin. Would you like to switch to our Pause Plan for only $9 per month, so you're ready to go when you hire again and avoid paying another setup fee?",
+          "content": "pause-benefits",
+          "primaryAction": "Pause for $9/month",
+          "acceptanceText": "Thank you! We'll switch you to the Pause Plan for $9/month, and you can reactivate your regular plan at any time. Our Customer Experience Team will email you within one business day to confirm the switch. Have a great day!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 5,
+        "externalText": "Starting to need an internal HR manager",
+        "active": false,
+        "internalOnly": false
+      },
+      {
+        "code": 2,
+        "externalText": "Sold Company",
+        "active": false,
+        "internalOnly": false
+      }
+    ]
+  },
+  {
+    "code": "scope",
+    "externalText": "Out of Scope",
+    "reasons": [
+      {
+        "code": 31,
+        "externalText": "Joined for Handbook or Handbook review only",
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 32,
+        "externalText": "Wanted more hands-on approach from HRM, or I wanted to be less involved",
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 33,
+        "externalText": "Wanted HR consulting only and no software",
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 34,
+        "externalText": "Software doesn't have the right features",
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 35,
+        "externalText": "Not converting 1099 Contractors to employees",
+        "active": true,
+        "internalOnly": false
+      }
+    ]
+  },
+  {
+    "code": "service",
+    "externalText": "Service",
+    "reasons": [
+      {
+        "code": 11,
+        "externalText": "HR Team doesn't respond quickly enough",
+        "rebuttalOrder": 2,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Want a new HR Manager?",
+          "text": "We have a large team of HR Managers, and we're happy to transfer you to a new one if you're not satisfied with the performance you've been seeing. Would you like to speak with our Customer Experience team about getting a new HR Manager?",
+          "primaryAction": "Get A New HR Manager",
+          "acceptanceText": "Thank you! We'll reach out to you within one business day to make sure we get you to the right HR Manager to address your concerns, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 21,
+        "externalText": "Policies or documents take too long",
+        "rebuttalOrder": 3,
+        "rebuttalData": {
+          "member": "cx",
+          "title": "Need quicker policies?",
+          "text": "We offer different levels of customization on the policies we prepare, and in most cases we should be able to deliver the documents you need within a few business days. Would you like to speak with our Customer Experience team to see how we can deliver those documents more quickly?",
+          "primaryAction": "Get Quicker Policies",
+          "acceptanceText": "Thank you! We'll reach out within one business day to go over how we can speed up the policies and documents you need, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 7,
+        "externalText": "HR Team doesn't reach out often enough",
+        "rebuttalOrder": 4,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Want regular calls with a new HR Manager?",
+          "text": "We have a large team of HR Managers, and we're happy to transfer you to a new one if you're not satisfied with the performance you've been seeing. Would you like a new HR Manager, who can schedule regular calls to make sure you're getting the service you need?",
+          "primaryAction": "Get A New HR Manager",
+          "acceptanceText": "Thank you! We'll reach out to you within one business day to make sure we get you to the right HR Manager to address your concerns, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 17,
+        "externalText": "HR Team lacks necessary expertise",
+        "rebuttalOrder": 8,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Want a new HR Manager?",
+          "text": "We have a large team of HR Managers, and we're happy to transfer you to a new one if you're not satisfied with the performance you've been seeing. Would you like to speak with our Customer Experience team about getting an HR Manager with the right expertise for your business?",
+          "primaryAction": "Get A New HR Manager",
+          "acceptanceText": "Thank you! We'll reach out to you within one business day to make sure we get you to an HR Manager with the right expertise for your business, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 24,
+        "externalText": "HR Team doesn't provide value",
+        "rebuttalOrder": 1,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Want a new HR Manager?",
+          "text": "We have a large team of HR Managers, and we're happy to transfer you to a new one if you're not satisfied with the performance you've been seeing. Would you like to speak with our Customer Experience team about getting a new HR Manager?",
+          "primaryAction": "Get A New HR Manager",
+          "acceptanceText": "Thank you! We'll reach out to you within one business day to make sure we get you to the right HR Manager to address your concerns, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 12,
+        "externalText": "Never spoke with HR Manager",
+        "active": true,
+        "internalOnly": true
+      },
+      {
+        "code": 28,
+        "externalText": "Unhappy I was assigned a new HR Manager",
+        "rebuttalOrder": 8,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Want a new HR Manager?",
+          "text": "We have a large team of HR Managers, and we're happy to transfer you to a new one if you're not satisfied with the performance you've been seeing. Would you like to speak with our Customer Experience team about getting an HR Manager with the right expertise for your business?",
+          "primaryAction": "Get A New HR Manager",
+          "acceptanceText": "Thank you! We'll reach out to you within one business day to make sure we get you to an HR Manager with the right expertise for your business, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": false,
+        "internalOnly": false
+      },
+      {
+        "code": 6,
+        "externalText": "Availaibilty",
+        "active": false,
+        "internalOnly": false
+      },
+      {
+        "code": 16,
+        "externalText": "Professionalism",
+        "active": false,
+        "internalOnly": false
+      },
+      {
+        "code": 4,
+        "externalText": "Unhappy with the Employee Handbook",
+        "rebuttalOrder": 13,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Need a better handbook?",
+          "text": "We have multiple Handbook experts on our team who should be able to quickly deliver whatever kind of handbook you need. Would you like to speak with our Customer Experience team about how we can deliver a better handbook for you?",
+          "primaryAction": "Get A Better Handbook",
+          "acceptanceText": "Thank you! We'll reach out within one business day to make sure we get you to a Handbook expert with the right expertise for your business, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": false,
+        "internalOnly": false
+      }
+    ]
+  },
+  {
+    "code": "value",
+    "externalText": "Time & Effort",
+    "reasons": [
+      {
+        "code": 22,
+        "externalText": "Requires too much of my time or effort",
+        "rebuttalOrder": 6,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Don't put yourself at risk",
+          "text": "The average lawsuit costs $600,000, and the best way to avoid this is through proper HR and insurance. Would you like to speak with our Customer Experience team about how we can demonstrate the ROI you need to continue with Bambee?",
+          "primaryAction": "Yes, Contact Me",
+          "primaryActionIcon": "/assets/images/d-icon-set/phone/fill-white.svg",
+          "acceptanceText": "Thank you! Our Customer Experience Team will reach out to you within one business day, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      }
+    ]
+  },
+  {
+    "code": "product",
+    "externalText": "Software",
+    "reasons": [
+      {
+        "code": 20,
+        "externalText": "Decided to consolidate my HR software",
+        "rebuttalOrder": 5,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "Don't put yourself at risk",
+          "text": "Most HR companies only offer one-size-fits-all solutions that can leave significant gaps in the risk mitigation of your business. Would you like to speak with our Customer Experience team about how we can work alongside your other HR solutions?",
+          "primaryAction": "Yes, Contact Me",
+          "primaryActionIcon": "/assets/images/d-icon-set/phone/fill-white.svg",
+          "acceptanceText": "Thank you! Our Customer Experience Team will reach out to you within one business day, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 18,
+        "externalText": "Software has bugs, or is too hard to use",
+        "rebuttalOrder": 14,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "We're sorry to see you go!",
+          "text": "As a nimble company, we're often able to fix software issues very quickly. Would you like to speak with our Product team about how we could fix the issues you're having?",
+          "primaryAction": "Yes, Contact Me",
+          "primaryActionIcon": "/assets/images/d-icon-set/phone/fill-white.svg",
+          "acceptanceText": "Thank you! We'll reach out within one business day to go over how we can fix the issues you're seeing, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 19,
+        "externalText": "Software doesn't have the right features",
+        "rebuttalOrder": 10,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "We're sorry to see you go!",
+          "text": "As a nimble company, we're sometimes able to add features very quickly. Would you like to speak with our Product team about how we could deliver the features you're looking for?",
+          "primaryAction": "Yes, Contact Me",
+          "primaryActionIcon": "/assets/images/d-icon-set/phone/fill-white.svg",
+          "acceptanceText": "Thank you! We'll reach out within one business day to go over how we can deliver the features that you need, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      }
+    ]
+  },
+  {
+    "code": "sales",
+    "externalText": "Sales",
+    "reasons": [
+      {
+        "code": 10,
+        "externalText": "Sales misalignment",
+        "active": false,
+        "internalOnly": true
+      }
+    ]
+  },
+  {
+    "code": "other",
+    "externalText": "Other",
+    "reasons": [
+      {
+        "code": 23,
+        "externalText": "Unknown",
+        "active": true,
+        "internalOnly": true
+      },
+      {
+        "code": 13,
+        "externalText": "None of these apply to me",
+        "rebuttalOrder": 12,
+        "rebuttalData": {
+          "member": "ceo",
+          "title": "We're sorry to see you go!",
+          "text": "As a nimble company, we're able to find solutions to most client issues. Would you like to speak with our Customer Experience team to see if we have a solution for your situation?",
+          "primaryAction": "Yes, Contact Me",
+          "primaryActionIcon": "/assets/images/d-icon-set/phone/fill-white.svg",
+          "acceptanceText": "Thank you! We'll reach out within one business day to go over what we might be able to do to deliver the service that you need, and we've placed your subscription on hold until we're able to get this resolved for you. We appreciate you giving us a chance to make this right!"
+        },
+        "active": true,
+        "internalOnly": false
+      },
+      {
+        "code": 14,
+        "externalText": "Stopped paying and became unresponsive",
+        "active": true,
+        "internalOnly": true
+      },
+      {
+        "code": 25,
+        "externalText": "Temporarily paused",
+        "active": true,
+        "internalOnly": true
+      },
+      {
+        "code": 26,
+        "externalText": "IC conversion assessment only",
+        "active": false,
+        "internalOnly": true
+      },
+      {
+        "code": 1,
+        "externalText": "All independent contractors",
+        "active": false,
+        "internalOnly": true
+      }
+    ]
+  }
+]
